@@ -1,0 +1,29 @@
+{
+  "name": "fullstack-open-2020-part3",
+  "version": "1.0.0",
+  "description": "phonebook backend app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "build:ui": "rm -rf build && cd ../fullstack-open-2020-phonebook-frontend && yarn build && cp -r build ../fullstack-open-2020-part3",
+    "logs:prod": "heroku logs --tail --app=phonebook-backend-part3",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "gidigidiolu",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.24",
+    "mongoose-unique-validator": "^2.0.3",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "eslint": "7.2.0",
+    "eslint-config-airbnb-base": "14.2.0",
+    "eslint-plugin-import": "^2.21.2",
+    "nodemon": "^2.0.4"
+  }
+}
